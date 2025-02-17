@@ -1,0 +1,599 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=DM+Sans:ital,opsz@1,9..40&family=Dancing+Script&family=Noto+Serif:ital,wght@1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Caveat:wght@500&family=DM+Sans:ital,opsz@1,9..40&family=Dancing+Script:wght@400;500&family=Noto+Serif:ital,wght@1,800&family=Permanent+Marker&display=swap");
+:root {
+  --primary-color: #fa3eee;
+  --primary-color-dark: #8c0583;
+  --font-heading: "Dancing Script", cursive;
+  --secondary-color: #f70606;
+  --text-light: #f5f7f2;
+  --text-dark: black;
+  --white: white;
+  --max-width: 1200px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section_container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem;
+  position: relative;
+}
+.section_header {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 3rem;
+  position: absolute;
+  top: -5%;
+  left: 40%;
+}
+.section_title:after {
+  position: absolute;
+  content: "";
+  bottom: -50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  left: 50%;
+  background-color: var(--secondary-color);
+}
+.section_subtitle {
+  font-size: 1rem;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.btn {
+  padding: 0.9rem 3rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  color: var(--white);
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: var(--primary-color-dark);
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: capitalize;
+}
+
+.nav_container {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-heading);
+}
+
+.nav_logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav_logo img {
+  max-width: 100px;
+}
+.nav_container .nav_menu {
+  left: 2%;
+}
+.nav_links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.link a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+.link a:hover {
+  color: var(--secondary-color);
+}
+header {
+  min-height: 600px;
+  margin-bottom: 4rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("assets/rear-view-back-young-asian-hiking-man-standing-riseup-hands-with-happy-peak-rocky-mountain-copy-space.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.header_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 600px;
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  text-align: center;
+}
+
+.header_content p {
+  font-size: 2rem;
+  color: var(--white);
+  font-family: var(--font-heading);
+}
+.header_content h1 {
+  font-size: 5rem;
+  background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-family: var(--font-heading);
+}
+.header_content .btn {
+  width: fit-content;
+  margin: auto;
+}
+.header_form {
+  position: absolute;
+  bottom: -15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 2rem);
+  max-width: 900px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.nav_menu {
+  display: none;
+}
+.header_form input {
+  flex: 2;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid var(--text-dark);
+  border-radius: 5px;
+}
+.header_form .btn {
+  flex: 1;
+  padding: 0.9rem 1.5rem;
+}
+.tour_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.tour_card {
+  position: relative;
+}
+.tour_card_details {
+  position: absolute;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  white-space: nowrap;
+}
+.tour_card_details h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+.tour_card_details p {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  margin: auto;
+  width: fit-content;
+  color: var(--white);
+  border: 1px solid var(--white);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.tour_card img {
+  border-radius: 5px;
+  display: flex;
+}
+.tour_card::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: var(--text-dark);
+  opacity: 0.3;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tour_card:hover::before {
+  opacity: 0.6;
+}
+
+.tour_card:hover p {
+  opacity: 1;
+}
+
+.holiday_grid {
+  margin: 4rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.holiday_card img {
+  border-radius: 5px;
+  display: flex;
+  margin-bottom: 1rem;
+}
+.holiday_container .section_header {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 2%;
+  left: 46%;
+}
+.holiday_container h2 {
+  position: absolute;
+  top: 5%;
+  left: 40%;
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+.holiday_container .section_subtitle {
+  position: absolute;
+  top: 14%;
+  left: 40%;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+.holiday_card h4 {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+.holiday_card p {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+.holiday_btn {
+  text-align: center;
+}
+.vacation {
+  padding-bottom: 7rem;
+  margin-bottom: 10rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(assets/full-shot-friends-running-together.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.vacation_container {
+  position: relative;
+}
+.vacation_container .section_header {
+  position: absolute;
+  top: 10%;
+  left: 45%;
+  font-size: 1.4rem;
+}
+.vacation_container .section_title {
+  position: absolute;
+  top: 35%;
+  left: 45%;
+  font-size: 1.4rem;
+}
+.vacation_container :is(.section_title, .section_subtitle) {
+  color: var(--white);
+}
+.vacation_img {
+  position: absolute;
+  top: 10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 450px;
+  padding: 1rem;
+}
+.vacation_img img {
+  width: 100%;
+  display: block;
+  border-radius: 5px;
+}
+.destination_grid {
+  max-width: 900px;
+  margin: 4rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.destination_card {
+  position: relative;
+  display: grid;
+  place-content: center;
+}
+.destination_card img {
+  max-width: 200px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.destination_card img:hover {
+  opacity: 0.7;
+}
+.destination_container .section_header {
+  position: absolute;
+  top: 15%;
+  left: 46%;
+  font-size: 1.3rem;
+}
+.destination_container .section_title {
+  position: absolute;
+  top: 25%;
+  left: 45%;
+  font-size: 1.3rem;
+}
+.destination_card h4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-family: var(--font-heading);
+  color: var(--white);
+}
+.discount {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url(assets/wp6848917-4k-travel-wallpapers.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.discount_container .btn {
+  margin-top: 4rem;
+}
+.discount_container .section_header {
+  position: absolute;
+  top: 10%;
+  left: 46%;
+  font-size: 1.3rem;
+}
+.discount_container .section_title {
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  font-size: 1.3rem;
+}
+.gallery_grid {
+  margin-top: 7rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+.gallery_grid img {
+  opacity: 0.7;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.gallery_grid img:hover {
+  opacity: 1;
+}
+.gallery_container .section_header {
+  position: absolute;
+  top: 10%;
+  left: 46%;
+  font-size: 1.3rem;
+}
+.gallery_container .section_title {
+  position: absolute;
+  top: 15%;
+  left: 45%;
+  font-size: 1.3rem;
+}
+footer {
+  background-color: var(--text-light);
+}
+.footer_container {
+  padding: 9rem;
+  text-align: center;
+}
+.social_icons {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.social_icons span {
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.social_icons span:hover {
+  color: var(--secondary-color);
+}
+.footer_container .description {
+  font-style: italic;
+  color: var(--text-dark);
+}
+
+.footer_container .section_header {
+  position: absolute;
+  top: 3%;
+  left: 46%;
+  font-size: 1.3rem;
+}
+.footer_container .section_title {
+  position: absolute;
+  top: 15%;
+  left: 45%;
+  font-size: 1.3rem;
+}
+
+@media (width<900px) {
+  .nav_links {
+    gap: 1rem;
+  }
+  .tour_card:last-child {
+    display: none;
+  }
+  .holiday_grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .gallery_grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (width<600px) {
+  .nav_links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: white;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),
+      5px 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  .nav_links.show {
+    display: flex;
+  }
+  .nav_menu {
+    display: block;
+    cursor: pointer;
+  }
+  header {
+    min-height: 700px;
+    margin-bottom: 7rem;
+  }
+  .header_form {
+    flex-direction: column;
+  }
+  .header_form :is(input, .btn) {
+    width: 100%;
+  }
+  .holiday_container .section_header {
+    top: -1%;
+  }
+  .holiday_container .section_title {
+    top: 2%;
+    left: 30%;
+  }
+  .holiday_container .section_subtitle {
+    top: 6%;
+    left: 30%;
+  }
+  .tour_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tour_card:last-child {
+    display: flex;
+  }
+  .holiday_grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .destination_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .destination_container .section_header {
+    top: 10%;
+  }
+  .destination_container .section_title {
+    top: 17%;
+    left: 40%;
+  }
+
+  .gallery_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery_container .section_header {
+    top: 5%;
+  }
+  .gallery_container .section_title {
+    top: 10%;
+  }
+}
+@media (width<550px) {
+  .header_form {
+    bottom: -30%;
+  }
+
+  .tour_container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .holiday_container .section_header {
+    top: -1%;
+    left: 35%;
+  }
+  .vacation_container .section_header {
+    left: 35%;
+  }
+  .vacation_container .section_title {
+    left: 40%;
+  }
+  .holiday_container .section_title {
+    top: 1%;
+    left: 20%;
+  }
+  .holiday_container .section_subtitle {
+    top: 6%;
+    left: 20%;
+  }
+  .gallery_grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .gallery_container .section_header {
+    top: 2%;
+  }
+  .gallery_container .section_title {
+    top: 5%;
+  }
+  .footer_container .section_header {
+    top: 10%;
+    left: 37%;
+  }
+  .footer_container .section_title {
+    top: 20%;
+    left: 35%;
+  }
+  .discount_container .section_title {
+    left: 25%;
+  }
+}
